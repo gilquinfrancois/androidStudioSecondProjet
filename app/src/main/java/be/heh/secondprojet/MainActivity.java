@@ -4,22 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
     private static final int CODE_ACTIVITE = 1; //Valeur arbitraire
+    SharedPreferences prefs_datas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Récupération du login, pwd et email
-        Bundle extratxt = this.getIntent().getExtras();
-        if(extratxt != null) {
-            Toast.makeText(getApplicationContext(), "Votre login est : " + (extratxt.getString("login")) + "\n" + "Votre password est : " + (extratxt.get("pwd")) + "\n" + "Votre email est : " + (extratxt.getString("email")), Toast.LENGTH_SHORT).show();
+        prefs_datas = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        //N'affiche pas de message lors du premier lancement de l'application
+        if(!prefs_datas.getAll().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Votre login est : " + (prefs_datas.getString("login","NULL")) + "\n" + "Votre password est : " + (prefs_datas.getString("pwd","NULL")) + "\n" + "Votre email est : " + (prefs_datas.getString("email","NULL")), Toast.LENGTH_SHORT).show();
         }
     }
 

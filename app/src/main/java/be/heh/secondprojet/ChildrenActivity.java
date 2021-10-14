@@ -11,6 +11,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class ChildrenActivity extends Activity {
 
     EditText et_children_email ;
@@ -48,6 +53,26 @@ public class ChildrenActivity extends Activity {
             case R.id.bt_children_li:
                 Intent versListe = new Intent(this, ListActivity.class);
                 startActivity(versListe);
+                finish();
+                break;
+            case R.id.bt_children_save:
+                String str = et_children_login.getText().toString() + "#" + et_children_pwd.getText().toString() + "#" + et_children_email.getText().toString() + "#";
+                Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+                try {
+                    FileOutputStream ous = openFileOutput("monfichier.txt",MODE_APPEND);
+                    byte[] tab;
+                    tab = str.toString().getBytes();
+                    ous.write(tab);
+                    ous.close();
+                } catch(FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch(IOException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.bt_children_read:
+                Intent versFile = new Intent(this,FileActivity.class);
+                startActivity(versFile);
                 finish();
                 break;
         }

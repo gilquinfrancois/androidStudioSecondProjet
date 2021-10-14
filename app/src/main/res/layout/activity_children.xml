@@ -79,6 +79,20 @@
         android:text="Afficher la liste"
         android:onClick="onChildrenClickManager"
         tools:ignore="OnClick" />
+    <Button
+        android:id="@+id/bt_children_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sauvegarder les données"
+        android:onClick="onChildrenClickManager"
+        tools:ignore="OnClick" />
+    <Button
+        android:id="@+id/bt_children_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lire les données"
+        android:onClick="onChildrenClickManager"
+        tools:ignore="OnClick" />
 
 
 

@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SecondProjet">
         <activity
+            android:name=".FileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ChildrenActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

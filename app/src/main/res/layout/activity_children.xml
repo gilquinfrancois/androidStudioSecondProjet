@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ChildrenActivity"
+    android:background="@color/notreBleu"
+    >
+    <ImageView
+        android:id="@+id/iv_children_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/btn_star_big_on"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INSCRIPTION"
+        android:textSize="30sp"
+        android:textColor="@color/notreVert"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/et_children_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="password"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/et_children_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/et_children_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        />
+
+    <!--<TextView
+        android:id="@+id/tv_children_Hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Bugdroid"
+        android:textSize="50sp"/>-->
+    <Button
+        android:id="@+id/bt_children_hb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="==> Parent"
+        android:onClick="onChildrenClickManager"
+        tools:ignore="OnClick" />
+    <Button
+        android:id="@+id/bt_children_li"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afficher la liste"
+        android:onClick="onChildrenClickManager"
+        tools:ignore="OnClick" />
+
+
+
+</LinearLayout>

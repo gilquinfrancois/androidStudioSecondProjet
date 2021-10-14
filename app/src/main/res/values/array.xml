@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tabVersion">
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
+        <item>Froyo</item>
+        <item>GingerBread</item>
+        <item>HoneyComb</item>
+        <item>Ice Cream Sandwich</item>
+        <item>Jelly Bean</item>
+        <item>Lollipop</item>
+        <item>Marshmallow</item>
+        <item>Nougat</item>
+        <item>Oreo</item>
+        <item>Pie</item>
+    </array>
+</resources>

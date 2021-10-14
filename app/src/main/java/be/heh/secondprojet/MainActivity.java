@@ -16,6 +16,11 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Récupération du login, pwd et email
+        Bundle extratxt = this.getIntent().getExtras();
+        if(extratxt != null) {
+            Toast.makeText(getApplicationContext(), "Votre login est : " + (extratxt.getString("login")) + "\n" + "Votre password est : " + (extratxt.get("pwd")) + "\n" + "Votre email est : " + (extratxt.getString("email")), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void onMainClickManager(View v){

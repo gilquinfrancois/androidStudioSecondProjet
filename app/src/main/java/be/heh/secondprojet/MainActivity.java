@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
                 switch (resultCode) {
                     case RESULT_OK:
                         Toast.makeText(this,"Action validée depuis l'activité Children",Toast.LENGTH_LONG).show();
-                        //l'exécution du code du corps de la méthode dans laquelle on se trouve se termine, quelle que soit la suite du corps de cette méthode;
+
                         return;
                     case RESULT_CANCELED:
                         Toast.makeText(this,"Action annulée depuis l'activité Children",Toast.LENGTH_LONG).show();

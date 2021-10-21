@@ -1,6 +1,4 @@
-package be.heh.secondprojet;
-
-import androidx.appcompat.app.AppCompatActivity;
+package be.heh.secondprojet.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,10 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import be.heh.secondprojet.BDD.User;
+import be.heh.secondprojet.BDD.UserAccessDB;
+import be.heh.secondprojet.R;
 
 public class ChildrenActivity extends Activity {
 
@@ -56,8 +57,10 @@ public class ChildrenActivity extends Activity {
                 finish();
                 break;
             case R.id.bt_children_save:
+
                 String str = et_children_login.getText().toString() + "#" + et_children_pwd.getText().toString() + "#" + et_children_email.getText().toString() + "#";
                 Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+                /*
                 try {
                     FileOutputStream ous = openFileOutput("monfichier.txt",MODE_APPEND);
                     byte[] tab;
@@ -70,8 +73,15 @@ public class ChildrenActivity extends Activity {
                     e.printStackTrace();
                 }
                 break;
+                 */
+                User user1 = new User(et_children_login.getText().toString(),et_children_pwd.getText().toString(),et_children_email.getText().toString());
+                UserAccessDB userDB = new UserAccessDB(this);
+                userDB.openForWrite();
+                userDB.insertUser(user1);
+                userDB.Close();
+                break;
             case R.id.bt_children_read:
-                Intent versFile = new Intent(this,FileActivity.class);
+                Intent versFile = new Intent(this, FileActivity.class);
                 startActivity(versFile);
                 finish();
                 break;

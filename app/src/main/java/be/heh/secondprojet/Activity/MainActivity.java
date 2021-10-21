@@ -1,6 +1,4 @@
-package be.heh.secondprojet;
-
-import androidx.appcompat.app.AppCompatActivity;
+package be.heh.secondprojet.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +7,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Toast;
+
+import be.heh.secondprojet.Activity.ChildrenActivity;
+import be.heh.secondprojet.R;
 
 public class MainActivity extends Activity {
 

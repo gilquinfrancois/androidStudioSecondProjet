@@ -1,10 +1,12 @@
-package be.heh.secondprojet;
+package be.heh.secondprojet.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+
+import be.heh.secondprojet.R;
 
 public class ListActivity extends PreferenceActivity {
 
